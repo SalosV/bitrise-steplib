@@ -1,0 +1,76 @@
+title: Fortinet VPN Connector
+summary: |
+  This step perform VPN connection with fortinet VPN protocol
+description: |
+  No description
+website: https://github.com/cleberhenriques/bitrise-step-fortinet-vpn-connector
+source_code_url: https://github.com/cleberhenriques/bitrise-step-fortinet-vpn-connector
+support_url: https://github.com/cleberhenriques/bitrise-step-fortinet-vpn-connector/issues
+published_at: 2024-01-05T08:40:01.186026-05:00
+source:
+  git: https://github.com/SalosV/bitrise-step-bitrise-step-fortinet-vpn-connector.git
+  commit: f74c50467e08473c1eb6013805c88fe3a8f851d4
+host_os_tags:
+- osx-10.10
+- ubuntu-16.04
+type_tags:
+- utility
+toolkit:
+  bash:
+    entry_file: step.sh
+deps:
+  brew:
+  - name: git
+  - name: wget
+  apt_get:
+  - name: git
+  - name: wget
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+run_if: ""
+inputs:
+- host: null
+  opts:
+    description: ""
+    is_expand: true
+    is_required: true
+    summary: The host DNS or IP address you want to connect to.
+    title: Host
+- opts:
+    description: ""
+    is_expand: true
+    is_required: true
+    summary: The port of the host you want to connect to.
+    title: Port
+  port: null
+- opts:
+    description: ""
+    is_expand: true
+    is_required: true
+    summary: The username that will be used for authentication.
+    title: Username
+  username: null
+- opts:
+    description: ""
+    is_expand: true
+    is_required: true
+    summary: The password that will be used for authentication.
+    title: Password
+  password: null
+- opts:
+    description: ""
+    is_expand: true
+    is_required: false
+    summary: The trusted certificate that will be used for authentication.
+    title: Certificate
+  trusted_cert: null
+outputs:
+- EXAMPLE_STEP_OUTPUT: null
+  opts:
+    description: |
+      Description of this output.
+
+      Can be Markdown formatted text.
+    summary: Summary. No more than 2-3 sentences.
+    title: Example Step Output
